@@ -1,0 +1,1 @@
+This repo is where all of the reusable React components from the KYN Platform live. The goal is to keep business logic and presentational logic as separate as possible. This separation of concerns will help us maintain clean code for the platform.
