@@ -1,0 +1,40 @@
+.KynPaperRipple {
+  --ink-color: currentColor;
+  position: relative;
+}
+
+.KynPaperRipple_innerContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.KynPaperRipple_overlay,
+.KynPaperRipple_circleContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+  opacity: 0;
+  background-color: var(--ink-color);
+}
+
+.KynPaperRipple_circleContainer {
+  background-color: unset;
+  opacity: 1;
+}
+
+.KynPaperRipple:hover .KynPaperRipple_overlay {
+  opacity: 0.04;
+}
+
+.KynPaperRipple_circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ink-color);
+  opacity: 1;
+}
