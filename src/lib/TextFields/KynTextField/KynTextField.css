@@ -1,0 +1,220 @@
+.KynTextField {
+  --primary-color: #000000;
+  --border-radius: 4px;
+  --label-text-font-family: inherit;
+  --label-text-color: rgba(0, 0, 0, 0.4);
+  --input-text-font-family: inherit;
+  --input-text-color: rgba(0, 0, 0, 0.87);
+  --input-text-font-size: 16px;
+  --helper-text-font-size: 12px;
+  --label-scale-factor: 0.75;
+  --container-color: rgba(0, 0, 0, 0.04);
+  --container-color-hover: rgba(0, 0, 0, 0.075);
+  --error-color: #B00020;
+  --static-underline-color: rgba(0, 0, 0, 0.42);
+  --static-underline-hover-color: rgba(0, 0, 0, 0.87);
+  width: 280px;
+  height: 72px;
+}
+
+.KynTextField_innerContainer {
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  background-color: var(--container-color);
+  width: 100%;
+  height: 56px;
+  display: flex;
+  position: relative;
+  cursor: text;
+}
+
+.KynTextField-isDisabled .KynTextField_innerContainer {
+  cursor: default;
+}
+
+.KynTextField_innerContainer:hover {
+  background-color: var(--container-color-hover);
+}
+
+.KynTextField-isDisabled .KynTextField_innerContainer:hover {
+  background-color: var(--container-color);
+}
+
+.KynTextField_innerContainer:hover .KynTextField_staticUnderline {
+  background-color: var(--static-underline-hover-color);
+}
+
+.KynTextField-isDisabled .KynTextField_staticUnderline,
+.KynTextField-isDisabled .KynTextField_innerContainer:hover .KynTextField_staticUnderline {
+  background-color: transparent;
+}
+
+.KynTextField_prefixContainer,
+.KynTextField_suffixContainer {
+  flex-grow: 0;
+}
+
+.KynTextField_prefixContainer {
+  padding-left: 12px;
+}
+
+.KynTextField_suffixContainer {
+  padding-right: 12px;
+}
+
+.KynTextField_inputContainer {
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+
+.KynTextField_prefixText,
+.KynTextField_suffixText {
+  flex-grow: 0;
+  line-height: 61px;
+  font-family: var(--input-text-font-family);
+  color: var(--label-text-color);
+  font-size: var(--input-text-font-size);
+  opacity: 0;
+  transition: opacity 0.2s ease 0s;
+}
+
+.KynTextField_prefixText {
+  order: 1;
+}
+
+.KynTextField_suffixText {
+  order: 3;
+}
+
+.KynTextField_input {
+  width: 100%;
+  height: 100%;
+  font-size: var(--input-text-font-size);
+  box-sizing: border-box;
+  padding-top: 5px;
+  caret-color: var(--primary-color);
+  font-family: var(--input-text-font-family);
+  color: var(--input-text-color);
+  flex-grow: 1;
+  order: 2;
+}
+
+.KynTextField-isError .KynTextField_input {
+  caret-color: var(--error-color);
+}
+
+.KynTextField_input::placeholder {
+  color: var(--label-text-color);
+  opacity: 0;
+  transition: opacity 0.2s ease 0s;
+}
+
+.KynTextField_input:focus::placeholder {
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+.KynTextField-rightAligned .KynTextField_input {
+  text-align: right;
+}
+
+.KynTextField_staticUnderline {
+  width: 100%;
+  height: 1px;
+  background-color: var(--static-underline-color);
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+
+.KynTextField_dynamicUnderline {
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 54px;
+  left: 0;
+  transform-origin: center center;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.KynTextField-isError .KynTextField_dynamicUnderline {
+  background-color: var(--error-color);
+  transform: scaleX(1);
+}
+
+.KynTextField_innerContainer:focus-within .KynTextField_dynamicUnderline {
+  transform: scaleX(1);
+}
+
+.KynTextField_label {
+  font-size: var(--input-text-font-size);
+  color: var(--label-text-color);
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  pointer-events: none;
+  transform-origin: 0 100%;
+  transition: transform 0.2s ease 0.2s;
+  font-family: var(--label-text-font-family);
+}
+
+.KynTextField-isError .KynTextField_label {
+  color: var(--error-color);
+}
+
+.KynTextField_input:focus ~ .KynTextField_label,
+.KynTextField_input:valid ~ .KynTextField_label {
+  transform: translateY(-20px) scale(var(--label-scale-factor));
+  transition: transform 0.2s ease 0s;
+}
+
+.KynTextField_helperText {
+  font-size: var(--helper-text-font-size);
+  font-family: var(--label-text-font-family);
+  color: var(--label-text-color);
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+}
+
+.KynTextField_errorText {
+  font-size: var(--helper-text-font-size);
+  font-family: var(--label-text-font-family);
+  color: var(--error-color);
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+}
+
+.KynTextField_input:focus ~ .KynTextField_prefixText,
+.KynTextField_input:valid ~ .KynTextField_prefixText,
+.KynTextField_input:focus ~ .KynTextField_suffixText,
+.KynTextField_input:valid ~ .KynTextField_suffixText {
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+.KynTextField_input:focus ~ .KynTextField_label {
+  color: var(--primary-color);
+}
+
+.KynTextField-isError .KynTextField_input:focus ~ .KynTextField_label {
+  color: var(--error-color);
+}
+
+.KynTextField_charCounter {
+  font-size: var(--helper-text-font-size);
+  font-family: var(--label-text-font-family);
+  color: var(--label-text-color);
+  position: absolute;
+  bottom: -16px;
+  right: 0;
+}
+
+.KynTextField-isError .KynTextField_charCounter {
+  color: var(--error-color);
+}
