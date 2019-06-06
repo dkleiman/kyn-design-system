@@ -42,15 +42,15 @@ npm run generate path/to/ComponentName -- --type function
 ```
 
 ## Todo List
-- [] Write docs and tests for `KynElevation`
-- [] `KynIcon`
-- [] `KynIconButton`
-- [] `KynValidatedTextField`
-- [] `KynPasswordField`
-- [] `KynDropdown`
-- [] `KynDatePicker`
-- [] `KynChip`
-- [] `KynCheckbox`
-- [] `KynRadioButton`
-- [] `KynRadioGroup`
-- [] `KynCheckboxGroup`
+- [ ] Write docs and tests for `KynElevation`
+- [ ] `KynIcon`
+- [ ] `KynIconButton`
+- [ ] `KynValidatedTextField`
+- [ ] `KynPasswordField`
+- [ ] `KynDropdown`
+- [ ] `KynDatePicker`
+- [ ] `KynChip`
+- [ ] `KynCheckbox`
+- [ ] `KynRadioButton`
+- [ ] `KynRadioGroup`
+- [ ] `KynCheckboxGroup`
