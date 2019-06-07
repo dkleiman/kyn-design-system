@@ -15,7 +15,8 @@
     "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "generate": "./scripts/generateComponent.js"
+    "generate": "./scripts/generateComponent.js",
+    "styleguide:deploy": "git subtree push --prefix styleguide origin gh-pages"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
