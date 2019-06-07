@@ -1,0 +1,20 @@
+.KynElevation {
+  position: relative;
+  display: inline-block;
+}
+
+.KynElevation_shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.KynElevation_shadow.is-visible {
+  opacity: 1;
+}
