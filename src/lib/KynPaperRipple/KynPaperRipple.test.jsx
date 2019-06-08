@@ -12,10 +12,9 @@ it('should properly set props and use handlers that are passed in', () => {
     />
   );
 
-  const domNode = paperRippleWrapper.getDOMNode();
-  expect(domNode.dataset.id).toBe('test-prop-passthrough');
-  expect(domNode.classList).toContain('test-classname-passthrough');
-  expect(domNode.classList.length).toBe(2);
+  const containingDiv = paperRippleWrapper.find('.KynPaperRipple');
+  expect(containingDiv.prop('data-id')).toBe('test-prop-passthrough');
+  expect(containingDiv.hasClass('test-classname-passthrough')).toBe(true);
 
   // Check if onMouseDown prop works
   paperRippleWrapper.simulate('mousedown', {
@@ -23,6 +22,5 @@ it('should properly set props and use handlers that are passed in', () => {
     clientY: 0,
   });
   expect(onMouseDownMock.mock.calls.length).toBe(1);
-
   paperRippleWrapper.unmount();
 });

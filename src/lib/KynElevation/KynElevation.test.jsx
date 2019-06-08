@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import KynElevation from './KynElevation';
 
 it('renders', () => {
-  const componentWrapper = mount(<KynElevation elevation={2} />);
+  const componentWrapper = shallow(<KynElevation elevation={2} />);
 
   let shadow0 = componentWrapper.find('.KynElevation_shadow').at(0);
   let shadow1 = componentWrapper.find('.KynElevation_shadow').at(1);
@@ -26,5 +26,4 @@ it('renders', () => {
   expect(shadow1.hasClass('is-visible')).toBe(true);
   expect(shadow1.hasClass('elevation-8')).toBe(true);
   expect(shadow1.hasClass('elevation-2')).toBe(false);
-  componentWrapper.unmount();
 });
