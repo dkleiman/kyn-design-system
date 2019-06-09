@@ -16,6 +16,7 @@ const KynIcon = (props) => {
     KynIcon: true,
     [className]: !!className,
     [`KynIcon-${size}`]: true,
+    'material-icons': true,
   });
   return <i className={classNames}>{name}</i>;
 }

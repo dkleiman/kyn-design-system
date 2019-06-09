@@ -1,25 +1,24 @@
 .KynIcon {
-  font-family: Material Icons;
   color: inherit;
   font-style: inherit;
 }
 
-.KynIcon-xsmall {
+.KynIcon-xsmall.material-icons {
   font-size: 12px;
 }
 
-.KynIcon-small {
+.KynIcon-small.material-icons {
   font-size: 16px;
 }
 
-.KynIcon-medium {
+.KynIcon-medium.material-icons {
   font-size: 24px;
 }
 
-.KynIcon-large {
+.KynIcon-large.material-icons {
   font-size: 48px;
 }
 
-.KynIcon-xlarge {
+.KynIcon-xlarge.material-icons {
   font-size: 64px;
 }
