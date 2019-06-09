@@ -42,8 +42,9 @@ npm run generate path/to/ComponentName -- --type function
 ```
 
 ## Todo List
-- [ ] Write docs and tests for `KynElevation`
-- [ ] `KynIcon`
+- [x] Write docs and tests for `KynElevation`
+- [x] Write docs and tests for `KynButton`
+- [x] `KynIcon`
 - [ ] `KynIconButton`
 - [ ] `KynValidatedTextField`
 - [ ] `KynPasswordField`

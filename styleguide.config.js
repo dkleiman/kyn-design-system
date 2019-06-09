@@ -23,6 +23,7 @@ module.exports = {
       components: 'src/lib/**/[A-Z]*.{js,jsx,ts,tsx}',
       ignore: [
         'src/lib/utils/**',
+        'src/lib/assets/**',
       ],
     },
   ],
