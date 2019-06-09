@@ -16,7 +16,7 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "generate": "./scripts/generateComponent.js",
-    "styleguide:deploy": "git subtree push --prefix styleguide origin gh-pages"
+    "styleguide:deploy": "styleguidist build && git add styleguide/* && git commit -am 'Update styleguide' && git push && git subtree push --prefix styleguide origin gh-pages"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

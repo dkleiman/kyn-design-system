@@ -30,7 +30,7 @@ KynIcon.propTypes = {
 };
 
 KynIcon.defaultProps = {
-  size: 'small',
+  size: 'medium',
   className: '',
 };
 
