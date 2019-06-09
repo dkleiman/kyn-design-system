@@ -27,4 +27,5 @@ module.exports = {
       ],
     },
   ],
+  assetsDir: 'src/lib/assets',
 };
