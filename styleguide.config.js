@@ -27,7 +27,4 @@ module.exports = {
       ],
     },
   ],
-  printBuildInstructions(config) {
-    console.log(config);
-  }
 };
