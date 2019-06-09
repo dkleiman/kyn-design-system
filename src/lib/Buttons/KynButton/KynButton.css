@@ -1,0 +1,64 @@
+.KynButton {
+  --primary-color: #000000;
+  --background-color: var(--primary-color);
+  --font-color: #FFFFFF;
+  --font-family: inherit;
+  --border-radius: 4px;
+  display: inline-block;
+  border-radius: var(--border-radius);
+}
+
+.KynButton-text, .KynButton-outline {
+  --background-color: transparent;
+  --font-color: var(--primary-color); 
+}
+
+.KynButton .KynPaperRipple {
+  color: var(--font-color);
+}
+
+.KynButton.KynButton-isDisabled .KynPaperRipple,
+.KynButton.KynButton-isDisabled .KynButton_button {
+  background-color: rgba(0, 0, 0, 0.09);
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.KynButton.KynButton-isDisabled .KynPaperRipple:hover .KynPaperRipple_overlay {
+  background-color: rgba(0, 0, 0, 0.09);
+  color: rgba(0, 0, 0, 0.46);
+  border-radius: var(--border-radius);
+}
+
+.KynButton-outline.KynButton-isDisabled .KynPaperRipple,
+.KynButton-outline.KynButton-isDisabled .KynButton_button,
+.KynButton-text.KynButton-isDisabled .KynPaperRipple,
+.KynButton-text.KynButton-isDisabled .KynButton_button {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.KynButton-outline.KynButton-isDisabled .KynPaperRipple:hover .KynPaperRipple_overlay,
+.KynButton-text.KynButton-isDisabled .KynPaperRipple:hover .KynPaperRipple_overlay {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.KynButton_button {
+  text-transform: uppercase;
+  min-width: 64px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  font-size: 14px;
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  border-radius: var(--border-radius);
+}
+
+.KynButton-text .KynButton_button {
+  padding: 0 8px;
+}
+
+.KynButton-outline {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
