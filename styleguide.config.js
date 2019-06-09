@@ -27,5 +27,7 @@ module.exports = {
       ],
     },
   ],
-  assetsDir: 'src/lib/assets',
+  printBuildInstructions(config) {
+    console.log(config);
+  }
 };
