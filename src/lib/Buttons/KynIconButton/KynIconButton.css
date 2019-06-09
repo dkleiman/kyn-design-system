@@ -1,0 +1,16 @@
+.KynIconButton {
+  width: 36px;
+  height: 36px;
+}
+
+.KynIconButton.KynButton {
+  --border-radius: 18px;
+}
+
+.KynIconButton .KynIcon {
+  padding: 6px;
+}
+
+.KynIconButton.KynButton .KynButton_button {
+  padding: 0;
+}
