@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e95cd6c.chunk.css",
-    "main.js": "/build/main.094b81a2.js",
+    "main.css": "/static/css/main.e3bc1332.chunk.css",
+    "main.js": "/build/main.6d8fdd58.js",
     "runtime~main.js": "/build/bundle.feb19782.js",
-    "build/2.0bf9fea1.js": "/build/2.0bf9fea1.js",
+    "build/2.14c83724.js": "/build/2.14c83724.js",
     "index.html": "/index.html",
-    "precache-manifest.4f64653e1f74c9dd80f33796b00b3004.js": "/precache-manifest.4f64653e1f74c9dd80f33796b00b3004.js",
+    "precache-manifest.357eaae79784dc931a19a14260c7552c.js": "/precache-manifest.357eaae79784dc931a19a14260c7552c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.1e95cd6c.chunk.css.map": "/static/css/main.1e95cd6c.chunk.css.map"
+    "static/css/main.e3bc1332.chunk.css.map": "/static/css/main.e3bc1332.chunk.css.map",
+    "static/media/material-icons.css": "/static/media/MaterialIcons-Regular.e79bfd88.eot"
   }
 }
