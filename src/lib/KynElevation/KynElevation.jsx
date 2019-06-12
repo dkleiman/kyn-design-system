@@ -6,7 +6,7 @@ import './KynElevation.css';
 import '../utils/css/elevation.css';
 
 /**
- * This component should be used to wrap other components that you want to give elevation to. It smoothly animates between elevations.
+ * This component should be used to wrap other components that you want to give elevation to. It smoothly animates between elevations by transitioning the opacity on the previous and current shadows meaning it can take advantage of hardware acceleration.
  *
  * @author [David Kleiman](https://github.com/dkleiman)
  */
