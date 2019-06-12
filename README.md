@@ -46,8 +46,7 @@ npm run generate path/to/ComponentName -- --type function
 - [x] Write docs and tests for `KynButton`
 - [x] `KynIcon`
 - [x] `KynIconButton`
-- [ ] `KynValidatedTextField`
-- [ ] `KynPasswordField`
+- [x] `KynPasswordField`
 - [ ] `KynDropdown`
 - [ ] `KynDatePicker`
 - [ ] `KynChip`
