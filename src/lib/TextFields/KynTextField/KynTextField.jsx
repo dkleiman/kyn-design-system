@@ -7,7 +7,7 @@ import './KynTextField.css';
 import '../../utils/css/reset.css'
 
 /**
- * This component is an implementation of the [Material Filled Text Field](https://material.io/design/components/text-fields.html) component. It is a fully controlled component, meaning it has no internal state.
+ * This component is an implementation of the [Material Filled Text Field](https://material.io/design/components/text-fields.html) component. It is a fully controlled component, meaning it has no internal state. Any additional props you pass down go to the text field.
  * 
  * @author [David Kleiman](https://github.com/dkleiman)
  */
@@ -95,6 +95,7 @@ class KynTextField extends React.Component {
       maxLength,
       prefixNode,
       suffixNode,
+      ...textFieldProps
     } = this.props;
     const containerClassNames = classnames({
       KynTextField: true,
@@ -120,6 +121,7 @@ class KynTextField extends React.Component {
               placeholder={placeholder}
               disabled={disabled}
               maxLength={maxLength}
+              {...textFieldProps}
               required
             />
             {prefixText && (

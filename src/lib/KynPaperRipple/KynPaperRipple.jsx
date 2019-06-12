@@ -33,8 +33,6 @@ class KynPaperRipple extends React.Component {
     onMouseDown: PropTypes.func,
     onMouseUp: PropTypes.func,
     onMouseLeave: PropTypes.func,
-    onTouchStart: PropTypes.func,
-    onTouchEnd: PropTypes.func,
   };
 
   static defaultProps = {
@@ -43,8 +41,6 @@ class KynPaperRipple extends React.Component {
     onMouseDown: () => {},
     onMouseUp: () => {},
     onMouseLeave: () => {},
-    onTouchStart: () => {},
-    onTouchEnd: () => {},
   };
 
   constructor(props) {
@@ -77,10 +73,8 @@ class KynPaperRipple extends React.Component {
     // Call the pass through
     const {
       onMouseDown,
-      onTouchStart,
     } = this.props;
     onMouseDown(e);
-    onTouchStart(e);
 
     this.isRunning = true;
 
@@ -135,11 +129,9 @@ class KynPaperRipple extends React.Component {
   actionEnd(e) {
     const {
       onMouseUp,
-      onTouchEnd,
       onMouseLeave,
     } = this.props;
     onMouseUp(e);
-    onTouchEnd(e);
     onMouseLeave(e);
 
     const maxOpacity = MAX_OPACITY;
@@ -171,8 +163,6 @@ class KynPaperRipple extends React.Component {
       className,
       onMouseDown, // Ignore
       onMouseUp, // Ignore
-      onTouchStart, // Ignore
-      onTouchEnd, // Ignore
       onMouseLeave, // Ignore
       ...otherProps
     } = this.props;
@@ -194,8 +184,6 @@ class KynPaperRipple extends React.Component {
         ref={this.container}
         onMouseDown={this.actionStart}
         onMouseUp={this.actionEnd}
-        onTouchStart={this.actionStart}
-        onTouchEnd={this.actionEnd}
         onMouseLeave={this.actionEnd}
         {...otherProps}
       >
